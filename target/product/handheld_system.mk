@@ -31,6 +31,15 @@ $(call inherit-product-if-exists, external/hyphenation-patterns/patterns.mk)
 $(call inherit-product-if-exists, frameworks/base/data/keyboards/keyboards.mk)
 $(call inherit-product-if-exists, frameworks/webview/chromium/chromium.mk)
 
+#Enable Gapps                                                      
+GAPPS_VARIANT := nano                               
+GAPPS_FORCE_PACKAGE_OVERRIDES := true                                                                                                 
+GAPPS_FORCE_WEBVIEW_OVERRIDES := true     
+
+#Allow for Gapps
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+
+
 PRODUCT_PACKAGES += \
     BasicDreams \
     BlockedNumberProvider \
