@@ -39,7 +39,6 @@ GAPPS_FORCE_WEBVIEW_OVERRIDES := true
 #Allow for Gapps
 $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 
-
 PRODUCT_PACKAGES += \
     BasicDreams \
     BlockedNumberProvider \
@@ -97,4 +96,3 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.config.alarm_alert?=Alarm_Classic.ogg
 
 PRODUCT_COPY_FILES += branding/bootanimation.zip:system/media/bootanimation.zip
-
